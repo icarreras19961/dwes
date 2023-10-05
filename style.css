@@ -71,12 +71,12 @@ a {
 }
 /*cuerpo - fechas*/
 #fechas{
-    border: 1px solid black;
+    border: 1px solid red;
     width: 50%;
     display: block;
     margin-left: 25%;
     margin-top: 3%;
-    height: 50px;
+    height: 150px;
 }
 /*cuerpo - habitaciones*/
 #habitaciones{
