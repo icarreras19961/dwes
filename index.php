@@ -3,20 +3,6 @@
 include('header.php');
 ?>
 
-<?php
-// cuando se pulse el submit mostrara por pantallael date in date out
-if (isset($_GET['submit'])) {
-  echo $_GET['date_in'];
-  echo $_GET['date_out'];
-}
-?>
-
-<!-- La conexion -->
-<?php
-include('C:\xampp\htdocs\student034\dwes\db\db_connection.php');
-?>
-
-
 <!-- Formulario de date_in date_out -->
 <?php
 include('C:\xampp\htdocs\student034\dwes\forms\form_reservation_select.php');

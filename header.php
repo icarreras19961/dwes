@@ -17,7 +17,7 @@
         </a>
       </div>
       <ul>
-        <li><a href="">Modalidades</a></li>
+        <li><a href="">Sign in</a></li>
         <li><a href="">Rooms</a></li>
         <li><a href="">Contactanos</a></li>
       </ul>
