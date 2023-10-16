@@ -5,7 +5,7 @@ include('header.php');
 
 <!-- Formulario de date_in date_out -->
 <?php
-include('C:\xampp\htdocs\student034\dwes\forms\form_reservation_select.php');
+include('C:\xampp\htdocs\student034\dwes\forms\reservations\form_reservation_select.php');
 ?>
 
 
