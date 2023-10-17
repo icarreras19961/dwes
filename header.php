@@ -22,27 +22,37 @@
             </a>
           </div>
           <div class="col-lg-2"><button>Sign in</button></div>
-          <div class="col-lg-2"><select name="Rooms">
-              <option value=""><a href="/student034/dwes/forms/rooms/form_rooms_select.php">Select</a></option>
-              <option value="">Insert</option>
-              <option value="">Update</option>
-              <option value="">Delete</option>
-            </select></div>
           <div class="col-lg-2">
-            <button>Contactanos</button>
+            Rooms
+            <ul>
+              <a href="/student034/dwes/forms/rooms/form_rooms_select.php">
+                <li>Select</li>
+              </a>
+              <a href="/student034/dwes/forms/rooms/form_rooms_insert.php">
+                <li>Insert</li>
+              </a>
+              <li>Update</li>
+              <li>Delete</li>
+            </ul>
           </div>
+          <div class="col-lg-2">
+            Customer
+            <ul>
+              <a href="/student034/dwes/forms/customers/form_customer_select.php">
+                <li>Select</li>
+              </a>
+              <a href="/student034/dwes/forms/customers/form_customer_insert.php">
+                <li>Insert</li>
+              </a>
+              <li>Update</li>
+              <li>Delete</li>
+            </ul>
+          </div>
+
         </div>
       </div>
 
     </nav>
 
     </div>
-
-    <ul>
-      <li><a href="">Sign in</a></li>
-      <li><a href="/student034/dwes/forms/rooms/form_rooms_select.php">Rooms</a></li>
-      <li><a href="">Contactanos</a></li>
-    </ul>
-
-
   </header>
