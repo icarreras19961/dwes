@@ -31,7 +31,10 @@
               <a href="/student034/dwes/forms/rooms/form_rooms_insert.php">
                 <li>Insert</li>
               </a>
-              <li>Update</li>
+              <a href="/student034/dwes/forms/rooms/form_rooms_update.php">
+                <li>Update</li>
+              </a>
+
               <li>Delete</li>
             </ul>
           </div>
@@ -44,7 +47,9 @@
               <a href="/student034/dwes/forms/customers/form_customer_insert.php">
                 <li>Insert</li>
               </a>
-              <li>Update</li>
+              <a href="/student034/dwes/forms/customers/form_customer_update.php">
+                <li>Update</li>
+              </a>
               <li>Delete</li>
             </ul>
           </div>
