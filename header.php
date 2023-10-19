@@ -47,10 +47,12 @@
               <a href="/student034/dwes/forms/customers/form_customer_insert.php">
                 <li>Insert</li>
               </a>
-              <a href="/student034/dwes/forms/customers/form_customer_update.php">
+              <a href="/student034/dwes/forms/customers/form_customer_update_call.php">
                 <li>Update</li>
               </a>
-              <li>Delete</li>
+              <a href="/student034/dwes/forms/customers/form_customer_delete_call.php">
+                <li>Delete</li>
+              </a>
             </ul>
           </div>
 

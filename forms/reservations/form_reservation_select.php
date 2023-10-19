@@ -1,6 +1,6 @@
 <!-- El contenido -->
 <div id="cuerpo">
-  
+
   <div id="fechas">
     <section id="date_in">
       <h4>Date In</h4>

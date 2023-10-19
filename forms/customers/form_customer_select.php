@@ -1,5 +1,5 @@
 <?php
-include('C:/xampp/htdocs/student034/dwes/header.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php');
 ?>
 
 
@@ -12,5 +12,5 @@ include('C:/xampp/htdocs/student034/dwes/header.php');
 
 
 <?php
-include('C:/xampp/htdocs/student034/dwes/footer.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/footer.php');
 ?>

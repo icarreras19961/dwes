@@ -1,5 +1,5 @@
 <?php
-include('C:/xampp/htdocs/student034/dwes/header.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php');
 ?>
 <div>
   <form action="/student034/dwes/db/rooms/db_rooms_insert.php" method="POST">
@@ -15,5 +15,5 @@ include('C:/xampp/htdocs/student034/dwes/header.php');
 
 <!-- El footer -->
 <?php
-include('C:/xampp/htdocs/student034/dwes/footer.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/footer.php');
 ?>
