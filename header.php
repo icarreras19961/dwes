@@ -11,20 +11,20 @@
 <!-- <link rel="stylesheet" type="text/css" href="./style.css"> -->
 
 <body>
-  <header>
-    <nav class="navbar bg-danger">
-      <div class="container">
-        <div class="row">
-          <!-- Logo mas titulo -->
-          <div class="col-lg-6">
-            <a href="/student034/dwes/index.php"><img src="imagenes/logo.png" alt="" width="50px">
-              <h1>Reshi's hotel</h1>
-            </a>
-          </div>
-          <div class="col-lg-2"><button>Sign in</button></div>
-          <div class="col-lg-2">
-            Rooms
-            <ul>
+  <header class="bg-danger">
+    <!-- <nav class="navbar bg-danger"> -->
+    <div class="container-fluid ">
+      <div class="row">
+        <!-- Logo mas titulo -->
+        <div class="col-lg-8">
+          <a href="/student034/dwes/index.php"><img src="imagenes/logo.png" alt="" width="50px">
+            <h1>Reshi's hotel</h1>
+          </a>
+        </div>
+        <div class="col-lg-4">
+          <div class="row justify-content-end align-item-center">
+
+            <ul class="col">Rooms
               <a href="/student034/dwes/forms/rooms/form_rooms_select.php">
                 <li>Select</li>
               </a>
@@ -37,10 +37,8 @@
 
               <li>Delete</li>
             </ul>
-          </div>
-          <div class="col-lg-2">
-            Customer
-            <ul>
+
+            <ul class="col">Customer
               <a href="/student034/dwes/forms/customers/form_customer_select.php">
                 <li>Select</li>
               </a>
@@ -54,12 +52,14 @@
                 <li>Delete</li>
               </a>
             </ul>
+            <button class="col">Sign in</button>
           </div>
 
         </div>
       </div>
+    </div>
 
-    </nav>
+    <!-- </nav> -->
 
     </div>
   </header>
