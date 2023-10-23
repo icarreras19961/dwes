@@ -17,42 +17,31 @@
       <div class="row">
         <!-- Logo mas titulo -->
         <div class="col-lg-8">
-          <a href="/student034/dwes/index.php"><img src="imagenes/logo.png" alt="" width="50px">
+          <a href="/student034/dwes/index.php"><img src="/student034/dwes/imagenes/logo.png" alt="" width="50px">
             <h1>Reshi's hotel</h1>
           </a>
         </div>
         <div class="col-lg-4">
-          <div class="row justify-content-end align-item-center">
-
-            <ul class="col">Rooms
-              <a href="/student034/dwes/forms/rooms/form_rooms_select.php">
-                <li>Select</li>
-              </a>
-              <a href="/student034/dwes/forms/rooms/form_rooms_insert.php">
-                <li>Insert</li>
-              </a>
-              <a href="/student034/dwes/forms/rooms/form_rooms_update.php">
-                <li>Update</li>
-              </a>
-
-              <li>Delete</li>
-            </ul>
-
-            <ul class="col">Customer
-              <a href="/student034/dwes/forms/customers/form_customer_select.php">
-                <li>Select</li>
-              </a>
-              <a href="/student034/dwes/forms/customers/form_customer_insert.php">
-                <li>Insert</li>
-              </a>
-              <a href="/student034/dwes/forms/customers/form_customer_update_call.php">
-                <li>Update</li>
-              </a>
-              <a href="/student034/dwes/forms/customers/form_customer_delete_call.php">
-                <li>Delete</li>
-              </a>
-            </ul>
-            <a class="col my-3" href="/student034/dwes/forms/customers/form_customer_login.php"><button >Sign in</button></a>
+          <div class="row">
+            <div class="col-lg-3 my-3">
+              <select name="Customer" id="" onchange="window.location.href=this.value;">
+                <option value="">Rooms</option>
+                <option value="/student034/dwes/forms/rooms/form_rooms_select.php">Select</option>
+                <option value="/student034/dwes/forms/rooms/form_rooms_insert.php">Insert</option>
+                <option value="/student034/dwes/forms/rooms/form_rooms_update.php">Update</option>
+                <option value="">Delete</option>
+              </select>
+            </div>
+            <div class="col-lg-3 my-3">
+              <select name="Customer" id="" onchange="window.location.href=this.value;">
+                <option value="">Customer</option>
+                <option value="/student034/dwes/forms/customers/form_customer_select.php">Select</option>
+                <option value="/student034/dwes/forms/customers/form_customer_insert.php">Insert</option>
+                <option value="/student034/dwes/forms/customers/form_customer_update_call.php">Update</option>
+                <option value="/student034/dwes/forms/customers/form_customer_delete_call.php">Delete</option>
+              </select>
+            </div>
+            <a class="col my-3" href="/student034/dwes/forms/customers/form_customer_login.php"><button>Sign in</button></a>
           </div>
 
         </div>

@@ -1,15 +1,26 @@
 <!-- El contenido -->
-<div id="cuerpo">
+<div class="container my-2" id="cuerpo">
+  <div class="row">
+    <div id="fechas">
+      <section id="date_in">
 
-  <div id="fechas">
-    <section id="date_in">
-      <h4>Date In</h4>
-      <form action="/student034/dwes/db/reservations/db_reservation_select.php" method="GET">
-        <label><input type="date" name="date_in"></label>
-        <h4>Date out</h4>
-        <label><input type="date" name="date_out"></label>
-        <label> <input type="submit" value="submit" name="submit"></label>
-      </form>
+        <form action="/student034/dwes/db/reservations/db_reservation_select.php" method="GET">
+          <div class="row">
+            <div class="col-lg-3">
+              <h4>Date In</h4>
+              <label><input type="date" name="date_in"></label>
+            </div>
+            <div class="col-lg-3">
+              <h4>Date out</h4>
+              <label><input type="date" name="date_out"></label>
+            </div>
+            <div class="col-lg-3 align-middle">
+              <label> <input type="submit" value="submit" name="submit"></label>
+            </div>
+          </div>
 
-    </section>
+        </form>
+
+      </section>
+    </div>
   </div>
