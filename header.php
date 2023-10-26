@@ -1,3 +1,8 @@
+<?php
+session_start();
+$user = $_SESSION['user'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,6 +25,7 @@
           <a href="/student034/dwes/index.php"><img src="/student034/dwes/imagenes/logo.png" alt="" width="50px">
             <h1>Reshi's hotel</h1>
           </a>
+          <h2>Hola <?php echo htmlspecialchars($user) ?></h2>
         </div>
         <div class="col-lg-4">
           <div class="row">

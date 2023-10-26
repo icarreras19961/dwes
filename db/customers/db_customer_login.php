@@ -1,4 +1,7 @@
 <?php
+include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php');
+?>
+<?php
 if (isset($_POST['submit'])) {
   include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/db/db_connection.php');
 
@@ -10,10 +13,11 @@ if (isset($_POST['submit'])) {
   $resultado = mysqli_query($conn, $sql);
   $customer = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 
-
   if (empty($customer)) {
     echo 'Cliente no existente';
   } else {
+    $_SESSION['user'] = $customer[0]['client_name'];
     echo 'Hola ' . $customer[0]['client_name'];
+    header('Location: /student034/dwes/index.php');
   }
 }
