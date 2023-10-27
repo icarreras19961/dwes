@@ -7,9 +7,16 @@ if (isset($_POST['submit'])) {
   
   $sql = 'SELECT * FROM 034_rooms';
   $resultado = mysqli_query($conn, $sql);
-  $muestra = mysqli_fetch_all($resultado, MYSQLI_NUM);
+  $muestra = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 
-  print_r($muestra);
+ foreach($muestra as $room){?>
+  <div>
+    <img src="../../imagenes/Rooms/<?php print_r($room['room_img'].".png")?>" alt="">
+  </div>
+  <!-- print_r($room);
+  echo "<br>"; -->
+ <?php
+ }
 
 }
 ?>
