@@ -27,6 +27,7 @@ if (isset($_POST['submit'])) {
             echo "120";
           }
           ?> €/night</p>
+          
     </form>
 <?php
   }
