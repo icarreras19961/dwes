@@ -1,7 +1,7 @@
 <?php
 session_start();
-$user_id = $_SESSION['user_id'];
-$user = $_SESSION['user']??'amigo';
+$user_id = $_SESSION['user_id'] ?? 0;
+$user = $_SESSION['user'] ?? 'amigo';
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +48,16 @@ $user = $_SESSION['user']??'amigo';
                 <option value="/student034/dwes/forms/customers/form_customer_delete_call.php">Delete</option>
               </select>
             </div>
-            <a class="col my-3" href="/student034/dwes/forms/customers/form_customer_login.php"><button>Sign in</button></a>
+            <?php
+            if ($user_id == 0) { ?>
+              <a class="col my-3" href="/student034/dwes/forms/customers/form_customer_login.php"><button>Sign in</button></a>
+            <?php
+            } else {?>
+              <a class="col my-3" href="/student034/dwes/db/customers/db_customer_logout.php"><button>Log out</button></a>
+            <?php
+            }
+            ?>
+
           </div>
 
         </div>
