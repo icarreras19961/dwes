@@ -9,11 +9,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/forms/reservations/form_re
 ?>
 
 
-<div id="habitaciones">
-  <p>
-    esto mostrara los resultados del las fechas con ls habitaciones y sus precios
-  </p>
-</div>
+
+  <img src="imagenes/hotel/mi_hotel.jpg" alt=""class="img-fluid my-2" width="1500px" style="border-radius: 20px;">
+
 
 </div>
 <!-- El footer -->
