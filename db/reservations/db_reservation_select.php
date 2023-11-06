@@ -55,7 +55,9 @@ if (isset($_GET['submit'])) {
         </div>
       </div>
       <?php
-      include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/forms/reservations/mini_form_reservation_insert.php');
+      if ($user_role == 'user' || $user_role == 'admin') {
+        include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/forms/reservations/mini_form_reservation_insert.php');
+      }
       ?>
 
     </div>

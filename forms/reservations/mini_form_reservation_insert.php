@@ -1,4 +1,4 @@
-<form action="/student034/dwes/db/reservations/db_reservation_insert.php" method="post">
+<form action="/student034/dwes/db/reservations/db_reservation_insert.php" method="post" style="float: right;">
   <input type="hidden" name="date_in" value="<?php echo $date_in; ?>">
   <input type="hidden" name="date_out" value="<?php echo $date_out; ?>">
   <input type="hidden" name="room_id" value="<?php print_r($room['room_id']); ?>">

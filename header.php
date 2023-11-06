@@ -2,6 +2,7 @@
 session_start();
 $user_id = $_SESSION['user_id'] ?? 0;
 $user = $_SESSION['user'] ?? 'amigo';
+$user_role = $_SESSION['user_role'] ?? 'anonimo';
 ?>
 
 <!DOCTYPE html>
@@ -29,26 +30,33 @@ $user = $_SESSION['user'] ?? 'amigo';
           </a>
 
         </div>
+
         <div class="col-lg-4">
           <div class="row">
-            <div class="col-lg-3 my-3">
-              <select name="Customer" id="" onchange="window.location.href=this.value;">
-                <option value="">Rooms</option>
-                <option value="/student034/dwes/forms/rooms/form_rooms_select.php">Select</option>
-                <option value="/student034/dwes/forms/rooms/form_rooms_insert.php">Insert</option>
-                <option value="/student034/dwes/forms/rooms/form_rooms_update.php">Update</option>
-                <option value="">Delete</option>
-              </select>
-            </div>
-            <div class="col-lg-3 my-3">
-              <select name="Customer" id="" onchange="window.location.href=this.value;">
-                <option value="">Customer</option>
-                <option value="/student034/dwes/forms/customers/form_customer_select.php">Select</option>
-                <option value="/student034/dwes/forms/customers/form_customer_insert.php">Insert</option>
-                <option value="/student034/dwes/forms/customers/form_customer_update_call.php">Update</option>
-                <option value="/student034/dwes/forms/customers/form_customer_delete_call.php">Delete</option>
-              </select>
-            </div>
+            <?php
+            if ($user_role == 'admin') {
+            ?>
+              <div class="col-lg-3 my-3">
+                <select name="Customer" id="" onchange="window.location.href=this.value;">
+                  <option value="">Rooms</option>
+                  <option value="/student034/dwes/forms/rooms/form_rooms_select.php">Select</option>
+                  <option value="/student034/dwes/forms/rooms/form_rooms_insert.php">Insert</option>
+                  <option value="/student034/dwes/forms/rooms/form_rooms_update.php">Update</option>
+                  <option value="">Delete</option>
+                </select>
+              </div>
+              <div class="col-lg-3 my-3">
+                <select name="Customer" id="" onchange="window.location.href=this.value;">
+                  <option value="">Customer</option>
+                  <option value="/student034/dwes/forms/customers/form_customer_select.php">Select</option>
+                  <option value="/student034/dwes/forms/customers/form_customer_insert.php">Insert</option>
+                  <option value="/student034/dwes/forms/customers/form_customer_update_call.php">Update</option>
+                  <option value="/student034/dwes/forms/customers/form_customer_delete_call.php">Delete</option>
+                </select>
+              </div>
+            <?php
+            }
+            ?>
             <div class="col-lg-5">
               <?php
               if ($user_id == 0) { ?>
