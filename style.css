@@ -1,88 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
-
-* {
-    margin: 0px;
-    padding: 0px;
+html {
 }
 
-/*Header*/
-header {
-    display: flex;
-    width: 100%;
-    height: 100px;
-    background-color: #e1e2e9;
-    font-family: "Montserrat";
+h1 {
+  text-align: center;
 }
-
-li {
-    margin: 2%;
-    list-style: none;
-    display: inline-block;
+body {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 3em;
+  
 }
-
-img {
-    width: 50px;
-    height: 50px;
-}
-
-a {
-    text-decoration: none;
-}
-
-/*Menu*/
-.menu {
-    margin: 20px;
-    float: left;
-    clear: left;
-    width: 100%;
-    height: auto;
-}
-
-#logo {
-    float: left;
-    width: 300px;
-    margin-left: 8%;
-}
-
-
-
-#logo>a>h1 {
-    float: right;
-    position: relative;
-    top: 10px;
-
-}
-
-.menu>ul {
-    float: right;
-    width: 60%;
-}
-
-.menu>ul>li {
-    float: right;
-
-}
-
-.menu>ul>li>a {
-    padding: 10px;
-    background-color: #001845;
-    color: #ffffff;
-    border-radius: 5px;
-}
-/*cuerpo - fechas*/
-#fechas{
-    border: 1px solid black;
-    width: 50%;
-    display: block;
-    margin-left: 25%;
-    margin-top: 3%;
-    height: 100px;
-}
-/*cuerpo - habitaciones*/
-#habitaciones{
-    border: 1px solid black;
-    width: 80%;
-    display: block;
-    margin-left: 10%;
-    margin-top: 3%;
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
