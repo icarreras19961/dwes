@@ -1,17 +1,35 @@
-html {
+/* header y footer */
+header {
+  background-color: #f4ebe4;
 }
-
 h1 {
   text-align: center;
 }
 body {
+  background-image: url("./imagenes/hotel/paisaje.png");
+  backdrop-filter: blur(10px);
   min-height: 100vh;
   position: relative;
   padding-bottom: 3em;
-  
+}
+#saludo_user {
+  background-color: #e9945b;
+  text-align: center;
+  border-radius: 15px;
+  width: auto;
 }
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+  background-color: #f4ebe4;
+}
+
+/* Form-reservation-select */
+#fechas {
+  background-color: #f4ebe4;
+  border-radius: 20px;
+  text-align: center;
+  width: auto;
+  padding: 10px;
 }
