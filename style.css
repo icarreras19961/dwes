@@ -5,6 +5,10 @@ header {
 h1 {
   text-align: center;
 }
+a{
+  color:black;
+  text-decoration: none;
+}
 body {
   background-image: url("./imagenes/hotel/paisaje.png");
   backdrop-filter: blur(10px);
