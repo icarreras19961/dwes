@@ -14,7 +14,23 @@ if (isset($_POST['submit'])) {
   $customer = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 
   if (empty($customer)) {
-    echo 'Cliente no existente';
+?>
+    <div class="bg-white p-4 rounded shadow" style="width: 25%; margin:auto;margin-top:50px">
+      <h1>Datos introducidos erroneos</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-6" style="text-align: center;">
+            <button class="btn btn-warning shadow"><a class="col" href="/student034/dwes/forms/customers/form_customer_login.php">Sign in</a></button>
+          </div>
+          <div class="col-6" style="text-align: center;">
+            <button class="btn btn-light  border shadow"><a href="/student034/dwes/forms/customers/form_customer_insert.php">Register</a>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+<?php
   } else {
     $_SESSION['user'] = $customer[0]['client_name'];
     $_SESSION['user_id'] = $customer[0]['client_id'];

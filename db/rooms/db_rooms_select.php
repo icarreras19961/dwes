@@ -10,34 +10,39 @@ if (isset($_POST['submit'])) {
   $muestra = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 
   foreach ($muestra as $room) { ?>
-    <form class="bg-light m-2 p-2 rounded border" style="width: 500px; float:left;">
+    <div class="bg-light m-2 p-2 rounded border shadow" style="width: 300px; float:left;">
       <div class="container">
         <div class="row">
-          <div class="col-lg-5">
+          <div class="col-lg-12">
 
-            <img src="../../imagenes/Rooms/<?php print_r($room['room_img'] . ".png") ?>" alt="" width="200px" height="200px">
+            <img src="../../imagenes/Rooms/<?php print_r($room['room_img'] . ".png") ?>" alt="" class="img-fluid rounded">
           </div>
           <!-- room_id <?php print_r($room['room_id']) ?> -->
-          <div class="col-lg-4">
+          <div class="col-lg-12">
             <ul>
-              <li>Tele</li>
-              <li>Pool</li>
-              <li>Food</li>
+              <li>TV</li>
+              <li>Swimming Pool</li>
+              <li>Mini Bar</li>
             </ul>
           </div>
-          <div class="col-lg-3">
 
-            <?php if ($room['type_of_reservation'] == 'All') {
-              echo "250";
-            } elseif ($room['type_of_reservation'] == 'Half') {
-              echo "200";
-            } else {
-              echo "120";
-            }
-            ?> €/night</div>
         </div>
+        <hr>
+        <div style="width: 100px; float:left;">
+
+          <?php if ($room['type_of_reservation'] == 'All') {
+            echo "250";
+            $room_price = 250;
+          } elseif ($room['type_of_reservation'] == 'Half') {
+            echo "200";
+            $room_price = 200;
+          } else {
+            echo "120";
+            $room_price = 120;
+          }
+          ?> €/night</div>
       </div>
-    </form>
+    </div>
 <?php
   }
 }

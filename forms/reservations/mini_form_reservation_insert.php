@@ -4,5 +4,5 @@
   <input type="hidden" name="room_id" value="<?php print_r($room['room_id']); ?>">
   <input type="hidden" name="room_price" value="<?php echo $room_price; ?>">
   <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
-  <label><input type="submit" value="submit" name="submit"></label>
+  <label><input class="btn btn-primary" type="submit" value="submit" name="submit"></label>
 </form>

@@ -8,7 +8,6 @@ $type = $_POST['opcion'];
 echo $type;
 $room_img;
 if ($type == 1) {
-  
   $room_img = 'room_1';
 }elseif($type == 2){
   

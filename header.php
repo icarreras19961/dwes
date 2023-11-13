@@ -41,7 +41,7 @@ $user_role = $_SESSION['user_role'] ?? 'anonimo';
             ?>
               <!-- Las opciones del SQL de rooms -->
               <div class="col-lg-3 my-3">
-                <select class="form-select" name="Rooms" id="" onchange="window.location.href=this.value;">
+                <select class="form-select shadow" name="Rooms" id="" onchange="window.location.href=this.value;">
                   <option value="">Rooms</option>
                   <option value="/student034/dwes/forms/rooms/form_rooms_select.php">Select</option>
                   <option value="/student034/dwes/forms/rooms/form_rooms_insert.php">Insert</option>
@@ -51,8 +51,9 @@ $user_role = $_SESSION['user_role'] ?? 'anonimo';
               </div>
               <!-- Las opciones del SQL de Customer -->
               <div class="col-lg-3 my-3">
-                <select class="form-select" name="Customer" id="" onchange="window.location.href=this.value;">
+                <select class="form-select shadow" name="Customer" id="" onchange="window.location.href=this.value;">
                   <option value="">Customer</option>
+                  <!-- <option value="/student034/dwes/db/customers/db_customer_select.php">Select</option> -->
                   <option value="/student034/dwes/forms/customers/form_customer_select.php">Select</option>
                   <option value="/student034/dwes/forms/customers/form_customer_insert.php">Insert</option>
                   <option value="/student034/dwes/forms/customers/form_customer_update_call.php">Update</option>
@@ -61,8 +62,10 @@ $user_role = $_SESSION['user_role'] ?? 'anonimo';
               </div>
               <!-- Las opciones del SQL de Reservations -->
               <div class="col-lg-3 my-3">
-                <select class="form-select" name="Reservations" id="" onchange="window.location.href=this.value;">
+                <select class="form-select shadow" name="Reservations" id="" onchange="window.location.href=this.value;">
                   <option value="">Reservations</option>
+                  <option value="/student034/dwes/forms/reservations/form_reservation_select.php">Select</option>
+                  <option value="/student034/dwes/forms/reservations/form_reservation_insert.php">Insert</option>
                   <option value="/student034/dwes/forms/reservations/form_reservation_update_call.php">Update</option>
                   <option value="/student034/dwes/forms/reservations/form_reservation_delete_call.php">Delete</option>
                 </select>
@@ -77,13 +80,13 @@ $user_role = $_SESSION['user_role'] ?? 'anonimo';
               <div class="col-lg-12" id="wellcome">
                 <div class="container">
                   <div class="row">
-                    <div class="col-5" id="saludo_user">
+                    <div class="col-5 shadow" id="saludo_user">
                       <h3>Hola <?php echo htmlspecialchars($user) ?></h3>
                     </div>
                     <div class="col-3">
-                      <button class="btn btn-warning"><a class="col my-3" href="/student034/dwes/forms/customers/form_customer_login.php">Sign in</a></button>
+                      <button class="btn btn-warning shadow"><a class="col my-3" href="/student034/dwes/forms/customers/form_customer_login.php">Sign in</a></button>
                     </div>
-                    <div class="col-3"><button class="btn btn-light mx-4 border"><a href="/student034/dwes/forms/customers/form_customer_insert.php">Register</a></button></div>
+                    <div class="col-3 "><button class="btn btn-light mx-4 border shadow"><a href="/student034/dwes/forms/customers/form_customer_insert.php">Register</a></button></div>
                   </div>
                 </div>
               </div>
@@ -92,7 +95,7 @@ $user_role = $_SESSION['user_role'] ?? 'anonimo';
               <!-- En caso de que si que este registrado el usuario -->
               <div class="container">
                 <div class="row">
-                  <div class="col-lg-4 my-3" id="saludo_user">
+                  <div class="col-lg-4 my-3 shadow" id="saludo_user">
                     <h3> <?php echo htmlspecialchars($user) ?></h3>
                   </div>
                   <div class="col-lg-4 my-3">
@@ -101,8 +104,8 @@ $user_role = $_SESSION['user_role'] ?? 'anonimo';
                     include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/forms/reservations/mini_form_reservation_select.php');
                     ?>
                   </div>
-                  <div class="col-lg-4">
-                    <button class="btn btn-warning"><a href="/student034/dwes/db/customers/db_customer_logout.php">Log out</a></button>
+                  <div class="col-lg-4 my-3">
+                    <button class="btn btn-warning shadow"><a href="/student034/dwes/db/customers/db_customer_logout.php">Log out</a></button>
                   </div>
                 </div>
               </div>
