@@ -1,19 +1,19 @@
 -------------------Clients----------------------------------
-CREATE TABLE `034_clients` (
-  `client_id` int PRIMARY KEY AUTO_INCREMENT, AUTO_INCREMENT=27,
-  `client_name` varchar(255) DEFAULT NULL,
-  `client_surname` varchar(255) DEFAULT NULL,
-  `role` enum('user','admin','anonimo') NOT NULL DEFAULT 'user',
-  `client_DNI` varchar(255) DEFAULT NULL,
-  `client_password` varchar(11) NOT NULL,
-  `client_email` varchar(255) NOT NULL,
-  `client_phone` varchar(10) DEFAULT NULL,
-  `credit_card` varchar(32) DEFAULT NULL,
-  `client_country` varchar(255) DEFAULT NULL,
-  `client_birth` date NOT NULL
+CREATE TABLE 034_clients (
+  client_id int PRIMARY KEY AUTO_INCREMENT, AUTO_INCREMENT=27,
+  client_name varchar(255) DEFAULT NULL,
+  client_surname varchar(255) DEFAULT NULL,
+  role enum('user','admin','anonimo') NOT NULL DEFAULT 'user',
+  client_DNI varchar(255) DEFAULT NULL,
+  client_password varchar(11) NOT NULL,
+  client_email varchar(255) NOT NULL,
+  client_phone varchar(10) DEFAULT NULL,
+  credit_card varchar(32) DEFAULT NULL,
+  client_country varchar(255) DEFAULT NULL,
+  client_birth date NOT NULL
 )
 
-INSERT INTO `034_clients` (`client_id`, `client_name`, `client_surname`, `role`, `client_DNI`, `client_password`, `client_email`, `client_phone`, `credit_card`, `client_country`, `client_birth`) VALUES
+INSERT INTO 034_clients (client_id, client_name, client_surname, role, client_DNI, client_password, client_email, client_phone, credit_card, client_country, client_birth) VALUES
 (1, 'Ivan', 'Carreras', 'admin', '41609268Z', '1234', 'ivan@gmail.com', '68555076', '9874 5632 1321 4567', 'Spain', '0000-00-00'),
 (2, 'dwesteacherenrique', 'Vizcaino', 'admin', '11111111A', 'Enrique', 'dwesteacherenrique', '111111111', '1111 1111 1111 1111', 'Spain', '0000-00-00'),
 (3, 'Sidney', 'Silva', 'user', '22222222B', '0', 'sidney@gmail.com', '222222222', '2222 2222 2222 2222', 'Brasil', '0000-00-00'),
@@ -39,40 +39,40 @@ INSERT INTO `034_clients` (`client_id`, `client_name`, `client_surname`, `role`,
 
 
 -------------------------Receipt---------------------------------
-CREATE TABLE `034_receipt` (
-  `receipt_id` int PRIMARY KEY AUTO_INCREMENT, AUTO_INCREMENT=15,
-  `reservation_id` int(11) DEFAULT NULL,
-  `id_client_master` int(11) NOT NULL,
-  `id_clients` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`id_clients`)),
-  `check_in` date DEFAULT NULL,
-  `check_out` date DEFAULT NULL,
-  `room_id` int(11) DEFAULT NULL,
-  `Type` enum('All','Half','just-room') DEFAULT NULL,
-  `services` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`services`)),
-  `initial_price` decimal(10,3) DEFAULT NULL,
-   FOREIGN KEY(id_client_master) REFERENCES `034_clients`(client_id),
-  FOREIGN KEY(room_id) REFERENCES `034_rooms`(room_id)
+CREATE TABLE 034_receipt (
+  receipt_id int PRIMARY KEY AUTO_INCREMENT, AUTO_INCREMENT=15,
+  reservation_id int(11) DEFAULT NULL,
+  id_client_master int(11) NOT NULL,
+  id_clients longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(id_clients)),
+  check_in date DEFAULT NULL,
+  check_out date DEFAULT NULL,
+  room_id int(11) DEFAULT NULL,
+  Type enum('All','Half','just-room') DEFAULT NULL,
+  services longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(services)),
+  initial_price decimal(10,3) DEFAULT NULL,
+   FOREIGN KEY(id_client_master) REFERENCES 034_clients(client_id),
+  FOREIGN KEY(room_id) REFERENCES 034_rooms(room_id)
 )
 
-INSERT INTO `034_receipt` (`receipt_id`, `reservation_id`, `id_client_master`, `id_clients`, `check_in`, `check_out`, `room_id`, `Type`, `services`, `initial_price`) VALUES
+INSERT INTO 034_receipt (receipt_id, reservation_id, id_client_master, id_clients, check_in, check_out, room_id, Type, services, initial_price) VALUES
 (1, 72, 18, NULL, '2023-06-01', '2023-06-04', 2, 'All', '{\n    \"Services\": {\n        \"Gym\": {\n            \"price\": 25\n        },\n        \"Spa\": {\n            \"price\":40\n        },\n        \"Bar\":{\n            \"price\":50\n        },\n        \"Wifi\":{\n            \"price\":5\n        },\n        \"Disco\":{\n            \"price\":70\n        },\n        \"Arcade\":{\n            \"price\":30\n        }\n    }\n}', 684.000),
 (2, 79, 21, NULL, '2023-06-01', '2023-06-03', 9, 'just-room', '{\n    \"Services\": {\n        \"Gym\": {\n            \"price\": 25\n        },\n        \"Spa\": {\n            \"price\":40\n        },\n        \"Bar\":{\n            \"price\":50\n        },\n        \n        \"Disco\":{\n            \"price\":70\n        },\n        \"Arcade\":{\n            \"price\":30\n        }\n    }\n}', 831.000);
 
 ------------------------reservation------------------------------
-CREATE TABLE `034_reservations` (
-  `reservation_id` int PRIMARY KEY AUTO_INCREMENT, AUTO_INCREMENT=88,
-  `id_client_master` int(11) NOT NULL,
-  `id_clients` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`id_clients`)),
-  `check_in` date DEFAULT NULL,
-  `check_out` date DEFAULT NULL,
-  `room_id` int(11) DEFAULT NULL,
-  `services` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`services`)),
-  `initial_price` decimal(10,3) DEFAULT NULL,
-  `type_of_reservation` enum('All','Half','just-room') DEFAULT NULL,
-  FOREIGN KEY(id_client_master) REFERENCES  `034_clients` (client_id),
-    FOREIGN KEY(room_id) REFERENCES `034_rooms`(room_id)
+CREATE TABLE 034_reservations (
+  reservation_id int PRIMARY KEY AUTO_INCREMENT, AUTO_INCREMENT=88,
+  id_client_master int(11) NOT NULL,
+  id_clients longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(id_clients)),
+  check_in date DEFAULT NULL,
+  check_out date DEFAULT NULL,
+  room_id int(11) DEFAULT NULL,
+  services longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(services)),
+  initial_price decimal(10,3) DEFAULT NULL,
+  type_of_reservation enum('All','Half','just-room') DEFAULT NULL,
+  FOREIGN KEY(id_client_master) REFERENCES  034_clients (client_id),
+    FOREIGN KEY(room_id) REFERENCES 034_rooms(room_id)
 )
-INSERT INTO `034_reservations` (`reservation_id`, `id_client_master`, `id_clients`, `check_in`, `check_out`, `room_id`, `services`, `initial_price`, `type_of_reservation`) VALUES
+INSERT INTO 034_reservations (reservation_id, id_client_master, id_clients, check_in, check_out, room_id, services, initial_price, type_of_reservation) VALUES
 (73, 4, NULL, '2023-06-11', '2023-06-18', 3, '{\n    \"Services\": {\n        \"Gym\": {\n            \"price\": 25\n        },\n        \"Bar\":{\n            \"price\":50\n        },\n        \"Disco\":{\n            \"price\":70\n        }\n    }\n}', 261.000, 'All'),
 (76, 10, NULL, '2023-06-07', '2023-06-13', 6, '{\n    \"Services\": {\n        \"Gym\": {\n            \"price\": 25\n        },\n        \"Bar\":{\n            \"price\":50\n        },\n        \"Disco\":{\n            \"price\":70\n        }\n    }\n}', 588.000, 'just-room'),
 (77, 1, NULL, '2023-06-10', '2023-06-13', 7, '{\n    \"Services\": {\n        \"Gym\": {\n            \"price\": 25\n        },\n        \"Wifi\":{\n            \"price\":5\n        },\n        \n        \"Arcade\":{\n            \"price\":30\n        }\n    }\n}', 358.000, 'All'),
@@ -87,14 +87,14 @@ INSERT INTO `034_reservations` (`reservation_id`, `id_client_master`, `id_client
 (87, 1, NULL, '2023-11-09', '2023-11-15', 3, NULL, 250.000, NULL);
 
 ----------------------rooms---------------------------
-CREATE TABLE `034_rooms` (
-  `room_id` int PRIMARY KEY AUTO_INCREMENT,AUTO_INCREMENT=51,
-  `type_of_reservation` enum('All','Half','just-room') DEFAULT NULL,
-  `status` enum('check_in','check_out','Ready','Booked') DEFAULT NULL,
-  `room_img` varchar(255) NOT NULL DEFAULT 'room_1'
+CREATE TABLE 034_rooms (
+  room_id int PRIMARY KEY AUTO_INCREMENT,AUTO_INCREMENT=51,
+  type_of_reservation enum('All','Half','just-room') DEFAULT NULL,
+  status enum('check_in','check_out','Ready','Booked') DEFAULT NULL,
+  room_img varchar(255) NOT NULL DEFAULT 'room_1'
 )
 
-INSERT INTO `034_rooms` (`room_id`, `type_of_reservation`, `status`, `room_img`) VALUES
+INSERT INTO 034_rooms (room_id, type_of_reservation, `status`, room_img) VALUES
 (1, 'Half', 'check_in', 'room_2'),
 (2, 'All', 'Ready', 'room_2'),
 (3, 'All', 'check_in', 'room_1'),
