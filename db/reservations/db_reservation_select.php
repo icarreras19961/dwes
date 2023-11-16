@@ -24,7 +24,7 @@ if (isset($_GET['submit'])) {
 
   // print_r($muestra[0]); //el print_r es para array el echo par aun unico dato
   foreach ($rooms as $room) { ?>
-    <div class="bg-light m-2 p-2 rounded border shadow" style="width: 300px; float:left;">
+    <div class="bg-light m-2 p-2 rounded border shadow" style="width: 300px;height:350px; float:left;">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">

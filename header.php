@@ -65,7 +65,7 @@ $user_role = $_SESSION['user_role'] ?? 'anonimo';
               <div class="col-lg-3 my-3">
                 <select class="form-select shadow" name="Reservations" id="" onchange="window.location.href=this.value;">
                   <option value="">Reservations</option>
-                  <option value="/student034/dwes/forms/reservations/form_reservation_select.php">Select</option>
+                  <option value="/student034/dwes/forms/reservations/form_reservation_select_all.php">Select</option>
                   <option value="/student034/dwes/forms/reservations/form_reservation_insert.php">Insert</option>
                   <option value="/student034/dwes/forms/reservations/form_reservation_update_call.php">Update</option>
                   <option value="/student034/dwes/forms/reservations/form_reservation_delete_call.php">Delete</option>

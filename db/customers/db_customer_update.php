@@ -1,6 +1,4 @@
-<?php
-include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php');
-?>
+
 <?php
 
 include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/db/db_connection.php');
@@ -15,7 +13,7 @@ $credit_card = $_POST['credit_card'];
 $client_country = $_POST['client_country'];
 $client_birth = $_POST['client_birth'];
 
-echo $client_id . $client_name . $client_surname . $client_DNI . $client_email .$client_phone . $credit_card . $client_country . $client_birth;
+echo $client_id . $client_name . $client_surname . $client_DNI . $client_email . $client_phone . $credit_card . $client_country . $client_birth;
 
 $sql =
   " UPDATE 034_clients

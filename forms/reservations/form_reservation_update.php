@@ -4,17 +4,16 @@ include($_SERVER['DOCUMENT_ROOT']. '/student034/dwes/db/reservations/db_reservat
 ?>
 
 <div class="m-4">
-    <form action="/student034/dwes/db/customers/db_customer_update.php" method="post">
-        <input type="hidden" name="client_id" value="<?php echo $_POST['client_id']; ?>">
+    <form action="/student034/dwes/db/reservations/db_reservation_update.php" method="post">
     
-        <p>Reservation Id</p><input type="text" name="client_name" value="<?php echo $client_info[0]['client_name']; ?>"></input>
-        <p>Id Cliente</p><input type="text" name="client_surname" value="<?php echo $client_info[0]['client_surname']; ?>"></input>
-        <p>Check in</p><input type="text" name="client_DNI" value="<?php echo $client_info[0]['client_DNI']; ?>"></input>
-        <p>Check out</p><input type="text" name="client_email" value="<?php echo $client_info[0]['client_email']; ?>"></input>
-        <p>Room id</p><input type="text" name="client_phone" value="<?php echo $client_info[0]['client_phone']; ?>"></input>
-        <p>Services</p><input type="text" name="credit_card" value="<?php echo $client_info[0]['credit_card']; ?>"></input>
-        <p>initial Price</p><input type="text" name="client_country" value="<?php echo $client_info[0]['client_country']; ?>"></input>
-        <p>Type of reservation</p><input type="text" name="client_birth" value="<?php echo $client_info[0]['client_birth']; ?>"></input>
+        <p>Reservation Id</p><input type="text" name="reservation_id" value="<?php echo $client_info[0]['reservation_id']; ?>" readonly></input>
+        <p>Id Cliente</p><input type="text" name="id_client_master" value="<?php echo $client_info[0]['id_client_master']; ?>"></input>
+        <p>Check in</p><input type="text" name="check_in" value="<?php echo $client_info[0]['check_in']; ?>"></input>
+        <p>Check out</p><input type="text" name="check_out" value="<?php echo $client_info[0]['check_out']; ?>"></input>
+        <p>Room id</p><input type="text" name="room_id" value="<?php echo $client_info[0]['room_id']; ?>"></input>
+        <p>Services</p><input type="text" name="services" value="<?php echo $client_info[0]['services']; ?>"></input>
+        <p>initial Price</p><input type="text" name="initial_price" value="<?php echo $client_info[0]['initial_price']; ?>"></input>
+        <p>Type of reservation</p><input type="text" name="type_of_reservation" value="<?php echo $client_info[0]['type_of_reservation']; ?>"></input>
 
         <input type="submit" name="submit" value="submit">
 

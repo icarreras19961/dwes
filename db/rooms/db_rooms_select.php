@@ -10,12 +10,12 @@ if (isset($_POST['submit'])) {
   $muestra = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 
   foreach ($muestra as $room) { ?>
-    <div class="bg-light m-2 p-2 rounded border shadow" style="width: 300px; float:left;">
+    <div class="bg-light m-2 p-2 rounded border shadow" style="width: 300px;height:350px; float:left;">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
 
-            <img src="../../imagenes/Rooms/<?php print_r($room['room_img'] . ".png") ?>" alt="" class="img-fluid rounded">
+            <img src="../../imagenes/Rooms/<?php print_r($room['room_img'] . ".png") ?>" alt="" class="img-fluid rounded" >
           </div>
           <!-- room_id <?php print_r($room['room_id']) ?> -->
           <div class="col-lg-12">
