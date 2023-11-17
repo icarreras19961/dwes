@@ -2,7 +2,7 @@
 //Las variable de inicio de session
 session_start();
 $user_id = $_SESSION['user_id'] ?? 0;
-$user = $_SESSION['user'] ?? 'amigo';
+$user = $_SESSION['user'] ?? 'friend';
 $user_role = $_SESSION['user_role'] ?? 'anonimo';
 
 ?>
@@ -82,7 +82,7 @@ $user_role = $_SESSION['user_role'] ?? 'anonimo';
                 <div class="container">
                   <div class="row">
                     <div class="col-5 shadow" id="saludo_user">
-                      <h3>Hola <?php echo htmlspecialchars($user) ?></h3>
+                      <h3>Helloo <?php echo htmlspecialchars($user) ?></h3>
                     </div>
                     <div class="col-3">
                       <button class="btn btn-warning shadow"><a class="col my-3" href="/student034/dwes/forms/customers/form_customer_login.php">Sign in</a></button>

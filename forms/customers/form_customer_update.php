@@ -6,8 +6,8 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/db/customers/db_customer_s
 
 
 
-<div class="m-4">
-    <form action="/student034/dwes/db/customers/db_customer_update.php" method="post">
+<div style="width: 20%; margin:auto; margin-top:50px">
+    <form  class="shadow bg-white rounded p-3 " action="/student034/dwes/db/customers/db_customer_update.php" method="post">
         <input type="hidden" name="client_id" value="<?php echo $_POST['client_id']; ?>">
     
         <p>Name</p><input type="text" name="client_name" value="<?php echo $client_info[0]['client_name']; ?>"></input>
@@ -19,7 +19,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/db/customers/db_customer_s
         <p>Contry</p><input type="text" name="client_country" value="<?php echo $client_info[0]['client_country']; ?>"></input>
         <p>Birth</p><input type="text" name="client_birth" value="<?php echo $client_info[0]['client_birth']; ?>"></input>
 
-        <input type="submit" name="submit" value="submit">
+        <input class="btn btn-primary border shadow" type="submit" name="submit" value="submit">
 
     </form>
 </div>

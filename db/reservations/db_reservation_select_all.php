@@ -19,7 +19,7 @@ $muestra = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
       <td><strong>services</strong></td>
       <td><strong>initial_price</strong></td>
       <td><strong>type_of_reservation</strong></td>
-      <td><strong>UPDATE</strong></td>
+      <td><strong>Update</strong></td>
       <td><strong>Delete</strong></td>
     </tr>
   <?php

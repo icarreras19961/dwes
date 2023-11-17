@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
   if (empty($customer)) {
 ?>
     <div class="bg-white p-4 rounded shadow" style="width: 25%; margin:auto;margin-top:50px">
-      <h1>Datos introducidos erroneos</h1>
+      <h1>The User name or the password are not correct</h1>
       <div class="container">
         <div class="row">
           <div class="col-6" style="text-align: center;">
