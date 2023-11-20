@@ -12,7 +12,8 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/db/customers/db_customer_s
     
         <p>Name</p><input type="text" name="client_name" value="<?php echo $client_info[0]['client_name']; ?>"></input>
         <p>Surname</p><input type="text" name="client_surname" value="<?php echo $client_info[0]['client_surname']; ?>"></input>
-        <p>DNI</p><input type="text" name="client_DNI" value="<?php echo $client_info[0]['client_DNI']; ?>"></input>
+        <p>DNI</p><input type="file" name="client_DNI" value="<?php echo $client_info[0]['client_DNI']; ?>" accept="image/png, image/jpg"></input>
+        <p>PICTURE DNI</p><input type="file" name="client_PICTURE_DNI" value="<?php echo $client_info[0]['client_DNI']; ?>" accept="image/png, image/jpg"></input>
         <p>Email</p><input type="text" name="client_email" value="<?php echo $client_info[0]['client_email']; ?>"></input>
         <p>Phone</p><input type="text" name="client_phone" value="<?php echo $client_info[0]['client_phone']; ?>"></input>
         <p>Credit Card</p><input type="text" name="credit_card" value="<?php echo $client_info[0]['credit_card']; ?>"></input>

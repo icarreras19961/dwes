@@ -6,7 +6,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/db/db_connection.php');
 $client_id = $_POST['client_id'];
 $client_name = $_POST['client_name'];
 $client_surname = $_POST['client_surname'];
-$client_DNI = $_POST['client_DNI'];
+$client_DNI = $_FILES['client_DNI'][""];
 $client_email = $_POST['client_email'];
 $client_phone = $_POST['client_phone'];
 $credit_card = $_POST['credit_card'];

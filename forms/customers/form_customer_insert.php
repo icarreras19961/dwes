@@ -3,10 +3,10 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php');
 ?>
 
 
-<div  style="width: 15%; margin:auto; margin-top:50px">
-  <form class="shadow bg-white rounded" action="/student034/dwes/db/customers/db_customer_insert.php" method="POST">
+<div style="width: 25%; margin:auto; margin-top:50px">
+  <form class="shadow bg-white rounded" action="/student034/dwes/db/customers/db_customer_insert.php" method="POST" enctype="multipart/form-data">
     <div class="form-group">
-      <label class="m-2 form-group">Nombre <input class="form-control" type="text" name="name" required></label>
+      <label class="m-2">Nombre <input class="form-control" type="text" name="name" required></label>
     </div>
     <div class="form-group">
       <label class="m-2">Apellido <input class="form-control" type="text" name="surname"></label>
@@ -15,7 +15,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php');
       <label class="m-2">Password <input class="form-control" type="password" name="pwd" required></label>
     </div>
     <div class="form-group">
-      <label class="m-2">Dni <input class="form-control" type="text" name="dni"></label>
+      <label class="m-2">Foto dni <input class="form-control" type="file" name="dni" accept="image/png, image/jpeg"></label>
     </div>
     <div class="form-group">
       <label class="m-2">Telefono <input class="form-control" type="text" name="phone"></label>

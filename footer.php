@@ -5,7 +5,7 @@
     <p class="col-md-4 col-sm-6 mb-0 text-muted">© 2021 Company, Inc</p>
 
     <a href="/" class="col-md-4 col-sm-6 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"><img src="imagenes/logo/icono.png" alt="" srcset="" width="50px"></svg>
+      <svg class="bi me-2" width="40" height="32"><img src="/student034/dwes/imagenes/logo/icono.png" alt="" srcset="" width="50px"></svg>
     </a>
 
     <ul class="nav col-md-4 col-sm-12 justify-content-end">
