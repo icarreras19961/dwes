@@ -35,6 +35,7 @@ if (isset($_POST['submit'])) {
     $_SESSION['user'] = $customer[0]['client_name'];
     $_SESSION['user_id'] = $customer[0]['client_id'];
     $_SESSION['user_role'] = $customer[0]['role'];
+    $_SESSION['user_foto'] = $customer[0]['client_avatar'];
     // echo 'Hola ' . $customer[0]['client_name'];
     header('Location: /student034/dwes/index.php');
   }

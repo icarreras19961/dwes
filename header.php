@@ -4,6 +4,7 @@ session_start();
 $user_id = $_SESSION['user_id'] ?? 0;
 $user = $_SESSION['user'] ?? 'friend';
 $user_role = $_SESSION['user_role'] ?? 'anonimo';
+$user_foto = $_SESSION['user_foto'] ?? 'xico.png';
 
 ?>
 
@@ -97,7 +98,12 @@ $user_role = $_SESSION['user_role'] ?? 'anonimo';
               <div class="container">
                 <div class="row">
                   <div class="col-lg-4 my-3 shadow" id="saludo_user">
-                    <h3> <?php echo htmlspecialchars($user) ?></h3>
+                    <div class="container">
+                      <div class="row">
+                        <img class="col-lg-6" id="avatar-img" src="/student034/dwes/imagenes/customers/avatar/<?php echo $user_foto ?>" alt="">
+                        <h3 class="col-lg-6"> <?php echo htmlspecialchars($user) ?></h3>
+                      </div>
+                    </div>
                   </div>
                   <div class="col-lg-4 my-3">
                     <!-- Mini select de las reservas del user -->

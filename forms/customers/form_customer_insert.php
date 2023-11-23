@@ -18,7 +18,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php');
       <label class="m-2">Password <input class="form-control" type="password" name="pwd" required></label>
     </div>
     <div class="form-group">
-      <label class="m-2">Foto dni <input class="form-control" type="file" name="foto" accept="image/png, image/jpeg"></label>
+      <label class="m-2">Foto dni <input class="form-control" type="file" name="foto" accept="image/png, image/jpg"></label>
     </div>
     <div class="form-group">
       <label class="m-2">Telefono <input class="form-control" type="text" name="phone"></label>

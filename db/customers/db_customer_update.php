@@ -6,7 +6,8 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/db/db_connection.php');
 $client_id = $_POST['client_id'];
 $client_name = $_POST['client_name'];
 $client_surname = $_POST['client_surname'];
-$client_DNI = $_FILES['client_DNI'][""];
+$foto_dni = $_FILES['foto_dni']['name'];
+$ruta_dni = $_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/imagenes/customers/DNI/' . $_FILES['foto']['name'];
 $client_email = $_POST['client_email'];
 $client_phone = $_POST['client_phone'];
 $credit_card = $_POST['credit_card'];
@@ -21,5 +22,6 @@ $sql =
     WHERE client_id = $client_id;
   ";
 $resultado = mysqli_query($conn, $sql);
+move_uploaded_file($_FILES['foto']['tmp_name'], $ruta);
 
 header('Location: /student034/dwes/forms/customers/form_customer_select.php');
