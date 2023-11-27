@@ -17,11 +17,12 @@ if (isset($_POST['submit'])) {
   <table class="table my-2">
     <tr>
       <td><strong>reservation_id</strong></td>
-     
+
       <td><strong>check_in</strong></td>
       <td><strong>check_out</strong></td>
       <td><strong>room_id</strong></td>
       <td><strong>services</strong></td>
+      <td><Strong>Change services</Strong></td>
       <td><strong>initial_price</strong></td>
       <td><strong>Update</strong></td>
       <td><strong>Delete</strong></td>
@@ -31,13 +32,17 @@ if (isset($_POST['submit'])) {
     ?>
       <tr>
         <td><?php print_r($reserva['reservation_id']) ?></td>
-        
         <td><?php print_r($reserva['check_in']) ?></td>
         <td><?php print_r($reserva['check_out']) ?></td>
         <td><?php print_r($reserva['room_id']) ?></td>
         <td><?php print_r($reserva['services']) ?></td>
+        <td>
+          <?php
+          include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/forms/reservations/mini_form_reservation_service_update.php');
+          ?>
+        </td>
         <td><?php print_r($reserva['initial_price']) ?></td>
-        
+
         <td>
           <?php include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/forms/reservations/mini_form_reservation_update.php'); ?>
         </td>
