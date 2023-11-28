@@ -1,19 +1,36 @@
 {
-  "Services": [
+  "Spa": [
     {
-      "Spa": 25
+      "Date Time": "2022-01-14 15:20:00",
+      "Initial Price": 25
     },
     {
-      "Gym": 10
-    },
+      "Date Time": "2022-01-14 15:20:00",
+      "Initial Price": 25
+    }
+  ],
+  "Gym": [
     {
-      "Horse_expedition": 50
-    },
+      "Date Time": "2022-01-14 15:20:00",
+      "Initial Price": 10
+    }
+  ],
+  "Horse_expedition": [
     {
-      "Diving": 45
-    },
+      "Date Time": "2022-01-14 15:20:00",
+      "Initial Price": 50
+    }
+  ],
+  "Diving": [
     {
-      
+      "Date Time": "2022-01-14 15:20:00",
+      "Initial Price": 45
+    }
+  ],
+  "Restaurant": [
+    {
+      "Date Time": "2022-01-14 15:20:00",
+      "Menu Price": 12
     }
   ]
 }
