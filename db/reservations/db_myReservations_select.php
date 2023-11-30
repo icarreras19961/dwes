@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
       <td><strong>room_id</strong></td>
       <td><strong>services</strong></td>
       <td><Strong>Change services</Strong></td>
-      <td><strong>initial_price</strong></td>
+      <td><strong>total_price</strong></td>
       <td><strong>Update</strong></td>
       <td><strong>Delete</strong></td>
     </tr>
@@ -40,31 +40,51 @@ if (isset($_POST['submit'])) {
         <td class="border"><?php
                             $extras = json_decode($reserva['services'], 1);
                             $services = array_keys($extras);
-                            print_r($services);
+                            $total_extras=[];
                             echo '<br>';
                             foreach ($services as $service) {
-                            ?>
-            <select name="" id="">
-              <option value="" style="width: auto;">
-                <?php echo $service; ?>
-              </option>
-              <option value="">
-                <?php print_r($extras[$service]); ?>
-              </option>
+                              for ($i = 0; $i < count($extras[$service]); $i++) {
 
-            </select>
-          <?php
-                              // echo $service . ': ';
+                                //me da error porque no entiende bien que haya  solo 1 valor en el json
+                            ?>
+                                <div>
+                                  <select name="" id="" style="display:flex; ">
+                                    <option value="" style="width: auto; text-align:center;">
+                                      <?php echo $service; ?>
+                                    </option>
+                                    <hr>
+                                    <option value="">
+                                      Date Time:
+                                      <?php
+                                                  print_r($extras[$service][$i]["Date Time"]);
+                                      ?>
+                                    </option>
+                                    <hr>
+                                    <option value="">
+                                      Initial Price:
+                                      <?php
+                                                  print_r($extras[$service][$i]["Initial Price"]);
+                                                  $total_extras[$service] += $extras[$service][$i]["Initial Price"];
+                                      ?>
+                                    </option>
+                                  </select>
+                                </div>
+                            <?php
+                           
+                              }              // echo $service . ': ';
                               // print_r($extras[$service]);
                               // echo '<br>';
-                            } ?>
+                            }
+                            //  print_r($total_extras);
+                            // echo array_sum(array_values($total_extras));
+                            ?>
         </td>
         <td class="border">
           <?php
           include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/forms/reservations/mini_form_reservation_service_update.php');
           ?>
         </td>
-        <td class="border"><?php print_r($reserva['initial_price']) ?></td>
+        <td class="border"><?php print_r($reserva['initial_price']+array_sum(array_values($total_extras)) ."€") ?></td>
 
         <td>
           <?php include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/forms/reservations/mini_form_reservation_update.php'); ?>
@@ -78,6 +98,9 @@ if (isset($_POST['submit'])) {
 
 <?php
 }
+?>
+<?php
+
 ?>
 
 <?php include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/footer.php');
