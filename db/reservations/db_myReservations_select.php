@@ -42,39 +42,41 @@ if (isset($_POST['submit'])) {
                             $services = array_keys($extras);
                             $total_extras=[];
                             echo '<br>';
-                            foreach ($services as $service) {
-                              for ($i = 0; $i < count($extras[$service]); $i++) {
+                            foreach ($services as $service) :
+                              echo $service;
+                              $total_extras[$service] = 0;
+                              for ($i = 0; $i < count($extras[$service]); $i++) :
 
                                 //me da error porque no entiende bien que haya  solo 1 valor en el json
                             ?>
                                 <div>
                                   <select name="" id="" style="display:flex; ">
                                     <option value="" style="width: auto; text-align:center;">
-                                      <?php echo $service; ?>
+                                    tiquet <?php echo " ".$i+1;?>
                                     </option>
                                     <hr>
                                     <option value="">
                                       Date Time:
                                       <?php
-                                                  print_r($extras[$service][$i]["Date Time"]);
+                                                  echo($extras[$service][$i]["Date Time"]);
                                       ?>
                                     </option>
                                     <hr>
                                     <option value="">
                                       Initial Price:
                                       <?php
-                                                  print_r($extras[$service][$i]["Initial Price"]);
-                                                  $total_extras[$service] += $extras[$service][$i]["Initial Price"];
-                                      ?>
+                                                  echo($extras[$service][$i]["Initial Price"]);
+                                                  ?>
                                     </option>
                                   </select>
                                 </div>
-                            <?php
-                           
-                              }              // echo $service . ': ';
+                                <?php
+
+                                $total_extras[$service] = $total_extras[$service] +   $extras[$service][$i]["Initial Price"];
+                              endfor;            // echo $service . ': ';
                               // print_r($extras[$service]);
                               // echo '<br>';
-                            }
+                            endforeach;
                             //  print_r($total_extras);
                             // echo array_sum(array_values($total_extras));
                             ?>

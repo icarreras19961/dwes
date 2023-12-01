@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
   $muestra = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 
   foreach ($muestra as $room) { ?>
-    <div class="bg-light m-2 p-2 rounded border shadow" style="width: 300px;height:350px; float:left;">
+    <div class="bg-light m-2 p-2 rounded border shadow " style="width: 300px;height:350px;">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
