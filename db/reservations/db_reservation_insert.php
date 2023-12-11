@@ -8,9 +8,9 @@ $room_price = $_POST['room_price'];
 
 echo $date_in . $date_out . $room_id . $user_id . $room_price;
 
-$sql = "INSERT INTO  	034_reservations(reservation_id,id_client_master,check_in,check_out,initial_price,room_id)
+$sql = "INSERT INTO  	034_reservations(reservation_id,id_client_master,check_in,check_out,initial_price,room_id,type_of_reservation)
         VALUES
-        (DEFAULT,$user_id,'$date_in','$date_out',$room_price,$room_id);";
+        (DEFAULT,$user_id,'$date_in','$date_out',$room_price,$room_id,'booked');";
 
 
 if (mysqli_query($conn, $sql)) {

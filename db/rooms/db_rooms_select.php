@@ -8,8 +8,9 @@ if (isset($_POST['submit'])) {
   $sql = 'SELECT * FROM 034_rooms';
   $resultado = mysqli_query($conn, $sql);
   $muestra = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
-
-  foreach ($muestra as $room) { ?>
+?>
+<div class="d-flex justify-content-center align-items-center flex-wrap">
+  <?php foreach ($muestra as $room) { ?>
     <div class="bg-light m-2 p-2 rounded border shadow " style="width: 300px;height:350px;">
       <div class="container">
         <div class="row">
@@ -45,6 +46,8 @@ if (isset($_POST['submit'])) {
     </div>
 <?php
   }
-}
-// include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/footer.php');
+}?>
+</div>
+<?php
+include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/footer.php');
 ?>

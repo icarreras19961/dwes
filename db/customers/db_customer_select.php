@@ -8,9 +8,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php');
   $sql = 'SELECT * FROM 034_clients ORDER BY client_surname ASC';
   $resultado = mysqli_query($conn, $sql);
   $muestra = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
-
-
-  foreach ($muestra as $customer) { ?>
+?>
+<div class="d-flex justify-content-center align-items-center flex-wrap">
+  <?php foreach ($muestra as $customer) { ?>
     <div class="bg-light m-2 p-2 rounded border" style="width: 400px;">
       <h2><?php print_r($customer['client_surname'] . ' ' . $customer['client_name']) ?></h2>
       <p><?php print_r($customer['client_DNI'] . ' ' .$customer['client_email']) ?></p>
@@ -24,5 +24,8 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php');
     </div>
 <?php
   }
-// }
+?>
+</div>
+<?php
+include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/footer.php');
 ?>
