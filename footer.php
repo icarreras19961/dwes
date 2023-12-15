@@ -10,7 +10,7 @@
 
   <ul class="nav col-md-4 col-sm-12 justify-content-end">
     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+    <li class="nav-item"><a href="/student034/dwes/Docs/user_Doc/userDoc.html" class="nav-link px-2 text-muted">User Doc</a></li>
     <li class="nav-item"><a href="/student034/dwes/Docs/TecnicalDoc.html" class="nav-link px-2 text-muted">Tecnical Doc</a></li>
     <li class="nav-item"><a href="/student034/dwes/Docs/instalation.html" class="nav-link px-2 text-muted">Intalation Doc</a></li>
     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
