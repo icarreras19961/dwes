@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tecnical Doc</title>
+
 </head>
 
 <body>
@@ -20,14 +20,24 @@
       <h3>Forms</h3>
       <p>What send the information to the files that interacts with the database</p>
       <h3>DB</h3>
-      <h4>Select</h4>
-      <p>It shows you the actual users of the webside with a little of information of each one</p>
-      <h4>Insert</h4>
-      <p>Insert the information from the form in the database</p>
-      <h4>Update</h4>
-      <p>Update the information from the form to the database</p>
-      <h4>Delete</h4>
-      <p>Deletes a user of the database</p>
+      <ul>
+        <li>
+          <h4>Select</h4>
+          <p>It shows you the actual users of the webside with a little of information of each one</p>
+        </li>
+        <li>
+          <h4>Insert</h4>
+          <p>Insert the information from the form in the database</p>
+        </li>
+        <li>
+          <h4>Update</h4>
+          <p>Update the information from the form to the database</p>
+        </li>
+        <li>
+          <h4>Delete</h4>
+          <p>Deletes a user of the database</p>
+        </li>
+      </ul>
       <h4>MiniForms</h4>
       <p>Its the same as the forms but included in the db files and takes the information from its</p>
     </div>
@@ -37,14 +47,24 @@
       <h3>Forms</h3>
       <p>What send the information to the files that interacts with the database</p>
       <h3>DB</h3>
-      <h4>Select</h4>
-      <p>It shows you the actual users of the webside with a little of information of each one</p>
-      <h4>Insert</h4>
-      <p>Insert the information from the form in the database</p>
-      <h4>Update</h4>
-      <p>Update the information from the form to the database</p>
-      <h4>Delete</h4>
-      <p>Deletes a user of the database</p>
+      <ul>
+        <li>
+          <h4>Select</h4>
+          <p>It shows you the actual users of the webside with a little of information of each one</p>
+        </li>
+        <li>
+          <h4>Insert</h4>
+          <p>Insert the information from the form in the database</p>
+        </li>
+        <li>
+          <h4>Update</h4>
+          <p>Update the information from the form to the database</p>
+        </li>
+        <li>
+          <h4>Delete</h4>
+          <p>Deletes a user of the database</p>
+        </li>
+      </ul>
       <h4>MiniForms</h4>
       <p>Its the same as the forms but included in the db files and takes the information from its</p>
       <hr>
@@ -54,14 +74,24 @@
       <h3>Forms</h3>
       <p>What send the information to the files that interacts with the database</p>
       <h3>DB</h3>
-      <h4>Select</h4>
-      <p>It shows you the actual users of the webside with a little of information of each one</p>
-      <h4>Insert</h4>
-      <p>Insert the information from the form in the database</p>
-      <h4>Update</h4>
-      <p>Update the information from the form to the database</p>
-      <h4>Delete</h4>
-      <p>Deletes a user of the database</p>
+      <ul>
+        <li>
+          <h4>Select</h4>
+          <p>It shows you the actual users of the webside with a little of information of each one</p>
+        </li>
+        <li>
+          <h4>Insert</h4>
+          <p>Insert the information from the form in the database</p>
+        </li>
+        <li>
+          <h4>Update</h4>
+          <p>Update the information from the form to the database</p>
+        </li>
+        <li>
+          <h4>Delete</h4>
+          <p>Deletes a user of the database</p>
+        </li>
+      </ul>
       <h4>MiniForms</h4>
       <p>Its the same as the forms but included in the db files and takes the information from its</p>
       <hr>
@@ -80,7 +110,7 @@
       <p>The index have on it an include of the reservations form to available the clients to make reservations</p>
       <hr>
       <h3>footer.php</h3>
-      <p>Its a footer copied of bootstrap</p>
+      <p>Its a footer copied of bootstrap, and it have the links to de docs.</p>
     </div>
   </main>
 </body>
