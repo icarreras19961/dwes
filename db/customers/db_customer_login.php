@@ -4,9 +4,10 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php');
 <?php
 if (isset($_POST['submit'])) {
   include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/db/db_connection.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/functions/php/formValidation.php');
 
-  $login_user = $_POST['user'];
-  $login_pwd = $_POST['pwd'];
+  $login_user = validateInput($_POST['user']);
+  $login_pwd = validateInput($_POST['pwd']);
 
   $sql = "SELECT * FROM 034_clients WHERE client_name = '$login_user' AND client_password = '$login_pwd';";
 
@@ -36,7 +37,6 @@ if (isset($_POST['submit'])) {
     $_SESSION['user_id'] = $customer[0]['client_id'];
     $_SESSION['user_role'] = $customer[0]['role'];
     $_SESSION['user_foto'] = $customer[0]['client_avatar'];
-    // echo 'Hola ' . $customer[0]['client_name'];
     header('Location: /student034/dwes/index.php');
   }
 }
