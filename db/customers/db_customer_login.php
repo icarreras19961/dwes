@@ -4,7 +4,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php');
 <?php
 if (isset($_POST['submit'])) {
   include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/db/db_connection.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/functions/php/formValidation.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/functions/php/form_validators/formValidation.php');
 
   $login_user = validateInput($_POST['user']);
   $login_pwd = validateInput($_POST['pwd']);
