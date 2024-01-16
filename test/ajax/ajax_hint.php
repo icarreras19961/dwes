@@ -20,15 +20,17 @@
         document.getElementById("sugerencia").innerText = "bonitao";
         return
       } else {
-        var connection = XMLHttpRequest()
-        connection.onreadystatechange = function() {
+        var conexion = new XMLHttpRequest()
+        conexion.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("sugerencia").innerText = this.responseText;
+            document.getElementById("sugerencia").innerHTML = this.responseText;
+
           }
         }
       }
-      connection.open("GET", "include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/test/ajax/ajax_get_db_customers_select.php');", true)
-      connection.send()
+      conexion.open("GET", "/student034/dwes/test/ajax/ajax_get_db_customers_select.php?q=" + string, true)
+      
+      conexion.send()
     }
   </script>
 
