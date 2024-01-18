@@ -45,7 +45,15 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/db/reservations/db_reserva
                 <option value="check_out">Check Out</option>
                 <option value="canceled">Canceled</option>
                 <option value="absent" selected="selected">absent</option>
-            <?php } ?>
+            <?php }else{
+                ?>
+                <option value="booked" selected="selected">Booked</option>
+                <option value="check_in">Check In</option>
+                <option value="check_out">Check Out</option>
+                <option value="canceled">Canceled</option>
+                <option value="absent" >absent</option>
+            <?php
+            } ?>
         </select>
         <input class="btn btn-primary" type="submit" name="submit" value="submit">
 

@@ -65,6 +65,7 @@ $user_foto = $_SESSION['user_foto'] ?? 'xico.png';
               <div class="col-lg-3 my-3">
                 <select class="form-select shadow" name="Reservations" id="" onchange="window.location.href=this.value;">
                   <option value="">Reservations</option>
+                  <option value="/student034/dwes/forms/reservations/form_review_select.php">Review Manager</option>
                   <option value="/student034/dwes/forms/reservations/form_reservation_select_all.php">Select</option>
                   <option value="/student034/dwes/forms/reservations/form_reservation_insert.php">Insert</option>
                   <option value="/student034/dwes/forms/reservations/form_reservation_update_call.php">Update</option>
