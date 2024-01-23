@@ -11,25 +11,26 @@
   <main>
     Search: <input type="text" onkeyup="showHint(this.value)">
     <p>Sugestions: <span id="sugerencia"></span></p>
+    <button onclick="showHint()">Tiempo jason</button>
 
   </main>
 
   <script>
     function showHint(string) {
-      if (string.length == 0) {
-        document.getElementById("sugerencia").innerText = "bonitao";
-        return
-      } else {
-        var conexion = new XMLHttpRequest()
-        conexion.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("sugerencia").innerHTML = this.responseText;
+      // if (string.length == 0) {
+      //   document.getElementById("sugerencia").innerText = "bonitao";
+      //   return
+      // } else {
+      var conexion = new XMLHttpRequest()
+      conexion.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          let json = JSON.parse(this.responseText);
+          console.log(json[0].Temperature.Metric);
 
-          }
         }
+        // }
       }
-      conexion.open("GET", "/student034/dwes/test/ajax/ajax_get_db_customers_select.php?q=" + string, true)
-      
+      conexion.open("GET", "http://dataservice.accuweather.com/currentconditions/v1/2-305482_1_AL?apikey=8AdlYAD6G75jphAShx4Xhh03PJfC7ABt", true)
       conexion.send()
     }
   </script>
