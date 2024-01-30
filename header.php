@@ -39,6 +39,7 @@ $user_foto = $_SESSION['user_foto'] ?? 'xico.png';
           <div class="row">
             <?php
             if ($user_role == 'admin') {
+
             ?>
               <!-- Las opciones del SQL de rooms -->
               <div class="col-lg-3 my-3">
@@ -109,6 +110,7 @@ $user_foto = $_SESSION['user_foto'] ?? 'xico.png';
                     <!-- Mini select de las reservas del user -->
                     <?php
                     include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/forms/reservations/mini_form_reservation_select.php');
+                    include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/API/AcuWeather/forms/form_acuweather.php');
                     ?>
                   </div>
                   <div class="col-lg-4 my-3">
