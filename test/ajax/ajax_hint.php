@@ -25,8 +25,8 @@
       conexion.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
           let json = JSON.parse(this.responseText);
-          console.log(json[0].Temperature.Metric);
-
+          console.log(json[0]);
+        
         }
         // }
       }

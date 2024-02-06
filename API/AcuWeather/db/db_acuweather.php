@@ -1,11 +1,10 @@
 <?php
-$wheather = $_SERVER['DOCUMENT_ROOT'] . "/student034/dwes/API/AcuWeather/Files/weather.json";
+$weather_file = $_SERVER['DOCUMENT_ROOT'] . "/student034/dwes/API/AcuWeather/Files/weather.json";;
 $icons = $_SERVER['DOCUMENT_ROOT'] . "/student034/dwes/API/AcuWeather/Files/weather_Icon.json";
 
 
-$theFile = json_decode(file_get_contents($wheather), true);
-$theFile = json_decode(file_get_contents($wheather), true);
-
+$weather_json = file_get_contents($weather_file);
+$weather = json_decode($weather_json, true);
 $theFileIcons = json_decode(file_get_contents($icons), true);
 
 
@@ -18,17 +17,17 @@ $theFileIcons = json_decode(file_get_contents($icons), true);
     <div style="background-color: white;border-radius:10px;margin: 5px; text-align:center;">
       <?php
       foreach ($theFileIcons as $theFileIcon) :
-        if ($theFile[0]["WeatherIcon"] == $theFileIcon["IconNumber"]) {
+        if ($weather[0]["WeatherIcon"] == $theFileIcon["IconNumber"]) {
       ?>
           <img src="<?php echo $theFileIcon["icon"]; ?>" alt="">
       <?php
         }
       endforeach;
-      echo "Temperatura" . $theFile[0]["Temperature"]["Metric"]["Value"] . " " .  "º". $theFile[0]["TemperatureSummary"]["Past6HourRange"]["Maximum"]["Metric"]["Unit"];
+      echo "Temperatura" . $weather[0]["Temperature"]["Metric"]["Value"] . " " .  "º" . $weather[0]["TemperatureSummary"]["Past6HourRange"]["Maximum"]["Metric"]["Unit"];
       echo "</br>";
-      echo "Max " . $theFile[0]["TemperatureSummary"]["Past6HourRange"]["Maximum"]["Metric"]["Value"] . " " .  "º" . $theFile[0]["TemperatureSummary"]["Past6HourRange"]["Maximum"]["Metric"]["Unit"];
+      echo "Max " . $weather[0]["TemperatureSummary"]["Past6HourRange"]["Maximum"]["Metric"]["Value"] . " " .  "º" . $weather[0]["TemperatureSummary"]["Past6HourRange"]["Maximum"]["Metric"]["Unit"];
       echo "</br>";
-      echo "Min " . $theFile[0]["TemperatureSummary"]["Past6HourRange"]["Minimum"]["Metric"]["Value"] . " " . "º" .  $theFile[0]["TemperatureSummary"]["Past6HourRange"]["Minimum"]["Metric"]["Unit"];
+      echo "Min " . $weather[0]["TemperatureSummary"]["Past6HourRange"]["Minimum"]["Metric"]["Value"] . " " . "º" .  $weather[0]["TemperatureSummary"]["Past6HourRange"]["Minimum"]["Metric"]["Unit"];
       ?>
     </div>
   </div>

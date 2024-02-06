@@ -110,7 +110,7 @@ $user_foto = $_SESSION['user_foto'] ?? 'xico.png';
                     <!-- Mini select de las reservas del user -->
                     <?php
                     include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/forms/reservations/mini_form_reservation_select.php');
-                    include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/API/AcuWeather/forms/form_acuweather.php');
+                    include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/API/AcuWeather/db/acuweather_reload.php');
                     ?>
                   </div>
                   <div class="col-lg-4 my-3">
