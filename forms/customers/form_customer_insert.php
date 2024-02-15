@@ -1,6 +1,8 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php');
 
+
+$name = $email = $pwd = "";
 $error = array("email" => "", "name" => "", "pwd" => "");
 
 if (isset($_POST['submit'])) {
@@ -26,6 +28,7 @@ if (isset($_POST['submit'])) {
 
   //Check password
   if (empty($_POST['pwd'])) {
+    $pwd = $_POST['pwd'];
     $error["pwd"] = "Please insert the password <br/>";
   } else {
     $error["pwd"] = "The password its invalid";
@@ -33,13 +36,11 @@ if (isset($_POST['submit'])) {
 }
 
 ?>
-<!-- TODO -->
-<!-- net ninja video 21 minuto 6:27 -->
-<!--se lo he quitado al form para k no haga cosas raras action="/student034/dwes/db/customers/db_customer_insert.php" -->
+
 <div style="width: 25%; margin:auto; margin-top:50px">
-  <form class="shadow bg-white rounded" method="POST" enctype="multipart/form-data">
+  <form class="shadow bg-white rounded" action="/student034/dwes/db/customers/db_customer_insert.php" method="POST" enctype="multipart/form-data">
     <div class="form-group">
-      <label class="m-2">Nombre <input class="form-control" type="text" name="name">
+      <label class="m-2">Nombre <input class="form-control" type="text" name="name" <?php echo htmlspecialchars($name) ?>required>
       </label>
       <div style="color: red;"><?php echo $error["name"]; ?></div>
     </div>
@@ -50,12 +51,12 @@ if (isset($_POST['submit'])) {
       <label class="m-2">DNI<input class="form-control" type="text" name="dni"></label>
     </div>
     <div class="form-group">
-      <label class="m-2">Email<input class="form-control" type="text" name="email"></label>
-      <div style="color: red;"><?php echo $error["name"]; ?></div>
+      <label class="m-2">Email<input class="form-control" type="text" name="email" <?php echo htmlspecialchars($email) ?>required></label>
+      <div style="color: red;"><?php echo $error["email"]; ?></div>
     </div>
     <div class="form-group">
-      <label class="m-2">Password <input class="form-control" type="password" name="pwd"></label>
-      <div style="color: red;"><?php echo $error["name"]; ?></div>
+      <label class="m-2">Password <input class="form-control" type="password" name="pwd" <?php echo htmlspecialchars($pwd) ?>required></label>
+      <div style="color: red;"><?php echo $error["pwd"]; ?></div>
     </div>
     <div class="form-group">
       <label class="m-2">Foto dni <input class="form-control" type="file" name="foto" accept="image/png, image/jpg"></label>
