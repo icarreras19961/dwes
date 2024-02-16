@@ -2,7 +2,8 @@
   "Spa": [
     {
       "Date Time": "2022-01-14 15:20:00",
-      "Initial Price": 25
+      "Initial Price": 25,
+      "nClients": 1
     },
     {
       "Date Time": "2022-01-14 15:20:00",
@@ -32,5 +33,6 @@
       "Date Time": "2022-01-14 15:20:00",
       "Initial Price": 12
     }
-  ]
+  ],
+  "totalImport": 0
 }

@@ -1,7 +1,7 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php')
 ?>
-<div style="width: 17%; margin:auto; margin-top:50px">
+<div style="width: 30%; margin:auto; margin-top:50px">
   <form class="shadow bg-white rounded" action="" method="post">
     <h4 class="m-2" style="text-align: center;">
       Try the services you want
@@ -14,6 +14,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php')
       <input id="spa" type="checkbox">
       <p>
         <input id="spa_date" type="date" style="display: none;">
+        <input type="number" name="" id="pSpaNum" style="display: none;">
       </p>
     </div>
     <div class="m-2">
@@ -23,6 +24,8 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php')
       <input id="gym" type="checkbox">
       <p>
         <input id="gym_date" type="date" style="display: none;">
+        <input type="number" name="" id="" style="display: none;">
+
       </p>
     </div>
     <div class="m-2">
@@ -32,6 +35,8 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php')
       <input id="hourse" type="checkbox">
       <p>
         <input id="hourse_date" type="date" style="display: none;">
+        <input type="number" name="" id="" style="display: none;">
+
       </p>
     </div>
     <div class="m-2">
@@ -41,6 +46,8 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php')
       <input id="diving" type="checkbox">
       <p>
         <input id="diving_date" type="date" style="display: none;">
+        <input type="number" name="" id="" style="display: none;">
+
       </p>
     </div>
     <div class="m-2">
@@ -50,6 +57,8 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php')
       <input id="restaurant" type="checkbox">
       <p>
         <input id="restaurant_date" type="date" style="display: none;">
+        <input type="number" name="" id="" style="display: none;">
+
       </p>
     </div>
     <div class="form-group" style="text-align: center;">
@@ -62,16 +71,25 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php')
 <script>
   //Para calcular el total que le va a sumar los extras
   let sumaTotal = 0;
-  let importe = document.getElementById("importe")
+  let importe = document.getElementById("importe");
+
+  // El extra del spa esta acabado solo queda clonar esto en los demas users
   let spa = document.getElementById("spa");
   let spa_date = document.getElementById("spa_date");
+  let pSpaNum = document.getElementById("pSpaNum");
   spa.addEventListener('click', (e) => {
     if (e.target.checked == true) {
-      sumaTotal = sumaTotal + 25;
+      pSpaNum.style.display = "block";
       spa_date.style.display = "block";
+      pSpaNum.addEventListener("change", (e) => {
+        sumaTotal = (25 * e.target.value);
+        importe.innerText = sumaTotal;
+      });
     } else {
-      sumaTotal = sumaTotal - 25;
+      pSpaNum.value = 0
+      sumaTotal = 25 * pSpaNum.value;
       spa_date.style.display = "none";
+      pSpaNum.style.display = "none";
 
     }
     console.log(sumaTotal);
@@ -137,4 +155,6 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php')
     console.log(sumaTotal);
     importe.innerText = sumaTotal;
   })
+  // TODO Acabar los extras
+  // En js creare un json que se guardara como extras y php lo leera para hacer el insert (siempre que no haya una manera de enviar los datos de manera mas facil claro)
 </script>

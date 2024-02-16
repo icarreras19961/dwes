@@ -57,7 +57,7 @@ $user_foto = $_SESSION['user_foto'] ?? 'xico.png';
                   <option value="">Customer</option>
                   <!-- <option value="/student034/dwes/db/customers/db_customer_select.php">Select</option> -->
                   <option value="/student034/dwes/forms/customers/form_customer_select.php">Select</option>
-                  <option value="/student034/dwes/forms/customers/form_customer_insert.php">Insert</option>
+                  <option value="/student034/dwes/forms/customers/form_customer_insert_db.php">Insert</option>
                   <option value="/student034/dwes/forms/customers/form_customer_update_call.php">Update</option>
                   <option value="/student034/dwes/forms/customers/form_customer_delete_call.php">Delete</option>
                 </select>
@@ -89,7 +89,7 @@ $user_foto = $_SESSION['user_foto'] ?? 'xico.png';
                     <div class="col-3">
                       <button class="btn btn-warning shadow"><a class="col my-3" href="/student034/dwes/forms/customers/form_customer_login.php">Sign in</a></button>
                     </div>
-                    <div class="col-3 "><button class="btn btn-light mx-4 border shadow"><a href="/student034/dwes/forms/customers/form_customer_insert.php">Register</a></button></div>
+                    <div class="col-3 "><button class="btn btn-light mx-4 border shadow"><a href="/student034/dwes/forms/customers/form_customer_insert_db.php">Register</a></button></div>
                   </div>
                 </div>
               </div>
