@@ -15,10 +15,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/db/db_connection.php');
 
 $weather_json;
 $date;
-print_r($weather_json);
-echo  $date;
-$sql = 'INSERT INTO 034_api_weather(weather_id ,weather_date,weather_json)
-VALUES(DEFAULT,"$date","$weather_json");';
+
+$sql = "INSERT INTO 034_api_weather(weather_id ,weather_date,weather_json)
+VALUES(DEFAULT,'$date','$weather_json');";
 if (mysqli_query($conn, $sql)) {
   echo 'Reserva confirmada';
 } else {

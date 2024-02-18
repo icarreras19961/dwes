@@ -15,7 +15,7 @@ $sql = "INSERT INTO  	034_reservations(reservation_id,id_client_master,check_in,
 
 if (mysqli_query($conn, $sql)) {
   echo 'Reserva confirmada';
+  header('Location: /student034/dwes/index.php');
 } else {
   echo 'ni un insert enserio?';
 }
-header('Location: /student034/dwes/index.php');
