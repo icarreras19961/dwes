@@ -16,8 +16,8 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php');
     </div>
   </form>
   <!-- Ajax customers -->
-  <h1 >Customers</h1>
-  <div id="customers" >
+  <h1>Customers</h1>
+  <div id="customers">
   </div>
 </div>
 
@@ -32,7 +32,6 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php');
       conexion.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
           document.getElementById("customers").innerHTML = this.responseText;
-
         }
       }
     }
