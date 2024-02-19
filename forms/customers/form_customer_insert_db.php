@@ -35,17 +35,15 @@ if (isset($_POST['submit'])) {
     $pwd = $_POST['pwd'];
     $allOk[2] = false;
     $error["pwd"] = "Please insert the password <br/>";
-  } else {
-    $allOk[2] = false;
-    $error["pwd"] = "The password its invalid";
+  }
+  // equivalente al db_customer_insert
+  if ($allOk[0] == true && $allOk[1] == true && $allOk[2] == true) {
+
+    include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/db/customers/db_customer_insert.php');
   }
 }
 
-// equivalente al db_customer_insert
-if ($allOk[0] = true && $allOk[1] = true && $allOk[2] = true) {
 
-  include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/db/customers/db_customer_insert.php');
-}
 ?>
 
 <div style="width: 25%; margin:auto; margin-top:50px">

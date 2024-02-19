@@ -28,7 +28,7 @@ $user_foto = $_SESSION['user_foto'] ?? 'xico.png';
         <!-- Logo mas titulo -->
         <div class="col-lg-7">
           <h1>
-            <a href="/student034/dwes/index.php"><img src="/student034/dwes/imagenes/logo/logo_v4.PNG" alt="" width="200px">
+            <a href="/student034/dwes/index.php"><img src="/student034/dwes/imagenes/logo/logo_v4.png" alt="" width="200px">
               <!-- #f4ebe4 color de fondo de la imagen para el header -->
             </a>
           </h1>
