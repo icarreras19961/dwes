@@ -9,7 +9,7 @@
  * @param [array from the select of the customer table] $customer
  * @return Devuelve la informacion del array maquetada para que sea agradable a la vista
  * @version 1.0.0
- * @deprecated none
+//  * @deprecated none
  */
 function showCustomer($customer)
 {
