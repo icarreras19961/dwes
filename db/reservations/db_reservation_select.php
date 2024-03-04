@@ -26,7 +26,7 @@ if (isset($_GET['submit'])) {
   <div class="d-flex justify-content-center align-items-center flex-wrap">
     <?php
     foreach ($rooms as $room) {
-      showRoom($room, true, $user_role);
+      showRoom($room, true, $user_role, $user_id, $date_in, $date_out);
     } ?>
   </div>
 <?php

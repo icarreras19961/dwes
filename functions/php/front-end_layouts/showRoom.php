@@ -1,5 +1,5 @@
 <?php
-function showRoom($room, $showReservationBoton, $user_role){?>
+function showRoom($room, $showReservationBoton, $user_role,$user_id,$date_in,$date_out){?>
   <div class="bg-light m-2 p-2 rounded border shadow " style="width: 300px;height:350px;">
     <div class="container">
       <div class="row">

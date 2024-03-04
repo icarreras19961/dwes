@@ -15,6 +15,6 @@ if (isset($_POST['submit'])) {
   $resultado = mysqli_query($conn, $sql);
   $myReservations = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 
-  showMyReservations($myReservations);
+  showMyReservations($myReservations, $client_id);
 }
 include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/footer.php');

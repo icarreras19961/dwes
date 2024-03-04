@@ -24,24 +24,24 @@ $reviews = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
         if ($review['status'] == 'hidden') {
         ?>
           <select name="<?php echo $review['review_id'] ?>" id="<?php echo $review['review_id'] ?>" onclick="updateReview(this.value,<?php print_r($review['reservation_id']) ?>)">
-            <option value="0">public</option>
-            <option value="1" selected>hidden</option>
+            <option value="1">public</option>
+            <option value="2" selected>hidden</option>
             <option value="3">not apropiated</option>
           </select>
         <?php
         } else if ($review['status'] == 'public') {
         ?>
           <select name="<?php echo $review['review_id'] ?>" id="<?php echo $review['review_id'] ?>" onclick="updateReview(this.value,<?php print_r($review['reservation_id']) ?>)">
-            <option value="0" selected>public</option>
-            <option value="1">hidden</option>
+            <option value="1" selected>public</option>
+            <option value="2">hidden</option>
             <option value="3">not apropiated</option>
           </select>
         <?php
         } else if ($review['status'] == 'not_apropiate') {
         ?>
           <select name="<?php echo $review['review_id'] ?>" id="<?php echo $review['review_id'] ?>" onclick="updateReview(this.value,<?php print_r($review['reservation_id']) ?>)">
-            <option value="0">public</option>
-            <option value="1">hidden</option>
+            <option value="1">public</option>
+            <option value="2">hidden</option>
             <option value="3" selected>not apropiated</option>
           </select>
         <?php

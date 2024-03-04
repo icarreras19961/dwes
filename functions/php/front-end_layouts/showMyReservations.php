@@ -1,5 +1,5 @@
 <?php
-function showMyReservations($myReservations)
+function showMyReservations($myReservations,$client_id)
 {
 ?>
   <table class="table my-2 table-striped">
