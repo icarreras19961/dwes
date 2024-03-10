@@ -12,6 +12,6 @@ $reservas = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 ?>
 <div class="d-flex justify-content-center align-items-center flex-wrap">
   <?php
-  showMyReservations($reservas);
+  showMyReservations($reservas,$solicitud);
   ?>
 </div>

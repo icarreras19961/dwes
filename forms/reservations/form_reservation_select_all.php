@@ -6,7 +6,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php');
 <div>
 	<form class="shadow bg-white rounded p-2" style="width: 20%; margin:auto; margin-top:50px"  action="/student034/dwes/db/reservations/db_reservation_select_all.php" method="POST">
 		<div class="form-group">
-			<h4>Search:</h4><input class="form-group" type="text" onkeyup="showHint(this.value)" placeholder="Reservation id">
+			<h4>Search:</h4><input class="form-group" type="text" onkeyup="showHint(this.value)" placeholder="Client id">
 		</div>
 		<hr>
 		<label><input class="btn btn-primary" type="submit" value="submit" name="submit"></label>

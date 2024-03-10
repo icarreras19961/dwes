@@ -4,7 +4,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/functions/php/front-end_la
 
 
 $solicitud = $_GET['q'];
-$sql = "SELECT * FROM `034_clients` WHERE client_name LIKE '%$solicitud%'";
+$sql = "SELECT * FROM `034_clients` WHERE client_name LIKE '%$solicitud%' OR client_surname LIKE '%$solicitud%'";
 
 $resultado = mysqli_query($conn, $sql);
 $customers = mysqli_fetch_all($resultado, MYSQLI_ASSOC);

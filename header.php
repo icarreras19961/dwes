@@ -5,6 +5,7 @@ $user_id = $_SESSION['user_id'] ?? 0;
 $user = $_SESSION['user'] ?? 'friend';
 $user_role = $_SESSION['user_role'] ?? 'anonimo';
 $user_foto = $_SESSION['user_foto'] ?? 'xico.png';
+
 ?>
 <!-- @author Ivan -->
 <!DOCTYPE html>

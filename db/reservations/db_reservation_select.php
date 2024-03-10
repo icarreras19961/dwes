@@ -1,15 +1,16 @@
 <?php
+setcookie("date_in", $_GET['date_in'], time() + 86400, "/");
+setcookie("date_out", $_GET['date_out'], time() + 86400, "/");
 include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/header.php');
 include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/functions/php/front-end_layouts/showRoom.php');
-?>
 
-<?php
 if (isset($_GET['submit'])) {
   //La consexion a la base de datos
   include($_SERVER['DOCUMENT_ROOT'] . '/student034/dwes/db/db_connection.php');
   $date_in = $_GET['date_in'];
   $date_out = $_GET['date_out'];
   $room_price;
+
   // echo $date_in;
 
   $sql = "SELECT * 
