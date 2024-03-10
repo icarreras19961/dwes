@@ -1,5 +1,5 @@
 <?php
-function showMyReservations($myReservations,$client_id)
+function showMyReservations($myReservations, $client_id)
 {
 ?>
   <table class="table my-2 table-striped">
@@ -73,6 +73,7 @@ function showMyReservations($myReservations,$client_id)
         <td class="border"><?php print_r($reserva['type_of_reservation']) ?></td>
         <td class="border">
           <?php
+          // print_r($reserva['reviewed']);
           if ($reserva['reviewed']) {
           ?>
             Reviewed
